@@ -41,8 +41,11 @@
 
             </div>
             <div class="col-sm-4">
+                
                 <div class="repoDetails" *ngFor="let repo of repoDetails">
-                    {{repo.name}}
+                        <h2 *ngIf="repo.name">Repo Name</h2>
+                    <h3 class="repo">{{repo.name}}</h3>
+                    
 
             </div>
     
