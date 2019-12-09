@@ -1,17 +1,38 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">GitHubSearch</a>
-      </div>
-      
-      </ul>
+<div class="container-fluid">
+    <div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">GitHubSearch</a>
+        </div>
+        
+        
+        </div>
+    </nav>
+
+    <div class="search">
+    <input  type="text" class="form-control" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
     </div>
-  </nav>
 
-<input type="text" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
 
-<p class='username'>{{ user.name }}</p>
-<p class ='username'>{{ user.login }}</p>
+    <table class="table table-striped">
+            <thead>
+                <tr class="table-info">
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{user.name}}</th>
+                    <td>{{user.login}}</td>
+                    <td>{{result.login}}</td>
+                    <td><img src="{{user.avatar_url}}" style="width:100px;height:100px;"></td>
+                    <td><a href="{{user.html_url}}">repos</a></td>
+                </tr>
+            </tbody>
+          </table>
 
-<img class="image_url_class" src="{{user.avatar_url}}">
 
+    
+    </div>
+</div>
