@@ -8,7 +8,7 @@ import  {User} from '../profile';
 })
 export class SearchComponent implements OnInit {
   user:User;
-  username:string;
+  username:string ="Joelmukono";
 
   constructor(private service:GitsearchService) { }
 
