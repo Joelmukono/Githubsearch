@@ -27,8 +27,8 @@ export class GitsearchService {
      let promise = new Promise((resolve,reject)=>{
        this.http.get<ApiResponse>(environment.apiUrl+username+environment.apiToken).toPromise().then(response=>{
          this.user.name = response.name;
-         this.user.login = response.name;
-         this.user.avatar_url = response.name;
+         this.user.login = response.login;
+         this.user.avatar_url = response.avatar_url;
          this.user.repos_url = response.repos_url;
 
          resolve()

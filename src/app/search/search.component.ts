@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   findProfiles(){
     this.service.userRequest(this.username);
     this.user = this.service.user;
+    
   }
 
   ngOnInit() {

@@ -1,3 +1,17 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">GitHubSearch</a>
+      </div>
+      
+      </ul>
+    </div>
+  </nav>
+
 <input type="text" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
 
-{{user.name}}
+<p class='username'>{{ user.name }}</p>
+<p class ='username'>{{ user.login }}</p>
+
+<img class="image_url_class" src="{{user.avatar_url}}">
+
