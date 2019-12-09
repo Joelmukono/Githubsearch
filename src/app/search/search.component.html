@@ -14,7 +14,10 @@
 
     <div class="container-fluid">
         <div class="search">
-            <input  type="text" class="form-control" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
+            <form action="" (ngSubmit)="findProfiles()">
+            <input  type="text" class="form-control"  [(ngModel)]="username" name="username">
+            <button type="submit" class="form-control">Search</button>
+            </form>
         </div>
     </div>
 
@@ -33,10 +36,13 @@
                 <h2 class="username" *ngIf="user.name">Github Name: {{user.name}}</h2>
                 <h4 class="login" *ngIf="user.login">Github Login: {{user.login}}</h4>
                 <h5 class="link" *ngIf="user.html_url"><a href="{{user.html_url}}">Github Repo</a></h5>
+                
                 </div>
 
             </div>
             <div class="col-sm-4">
+                <div class="repoDetails" *ngFor="let repo of repoDetails">
+                    {{repo.name}}
 
             </div>
     

@@ -14,9 +14,12 @@ export class GitsearchService {
 
   user:User;
   repo:Repos;
+  repoData = []
+  newData:any = []
 
   constructor(private http:HttpClient) {
-    this.user = new User("","","","","","");
+    this.user = new User("","","","","","",0);
+    this.repo = new Repos("","","");
    }
 
    userRequest(username){
@@ -25,6 +28,7 @@ export class GitsearchService {
        login:string;
        avatar_url:string;
        html_url:string;
+       public_repos:number;
        followers_url:string;
        following_url:string;
      }
@@ -35,7 +39,8 @@ export class GitsearchService {
          this.user.avatar_url = response.avatar_url;
          this.user.html_url = response.html_url;
          this.user.followers_url = response.followers_url;
-         this.user.following_url = response.following_url
+         this.user.following_url = response.following_url;
+         this.user.public_repos = response.public_repos;
 
          resolve()
 
@@ -55,14 +60,41 @@ export class GitsearchService {
 
 
    }
+   
 
 
-   reposRequest(){
+   reposRequest(username){
      interface ApiResponse{
+       name:string;
+       description:string;
+       html_url:string;
        
      }
 
-   }
+     const promise = new Promise((resolve, reject)=>{
+       this.http.get<ApiResponse>(environment.apiUrl+username+environment.reposUrl).toPromise().then(response=>{
+         for(let i = 0; i<= this.user.public_repos;i++){
+          this.repo.name = response[i].name;
+          this.repo.description = response[i].description;
+          this.repo.html_url = response[i].html_url;
+          this.newData = new Repos(this.repo.name, this.repo.description, this.repo.html_url);
+          this.repoData.push(this.newData);
 
+
+         }resolve();
+
+        },
+        error => {
+          this.repo.name = 'sdfg';
+          reject(error);
+        })
+
+
+       
+     });
+     return promise;
+
+   }
+ 
    
 }

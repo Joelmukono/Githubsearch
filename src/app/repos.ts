@@ -1,6 +1,6 @@
 export class Repos {
-    constructor(public repos_url:string){
-        
+    constructor(public name:string,public description:string,public html_url:string){
+
     }
 
 }
