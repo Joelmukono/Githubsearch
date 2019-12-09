@@ -1,4 +1,4 @@
-<div class="container-fluid">
+
     <div class="container">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -9,23 +9,31 @@
         
         </div>
     </nav>
-
-
-    <div class="search">
-    <input  type="text" class="form-control" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
     </div>
 
 
     <div class="container-fluid">
+        <div class="search">
+            <input  type="text" class="form-control" (keyup)="findProfiles()" [(ngModel)]="username" name="username">
+        </div>
+    </div>
+
+
+    <div class="results container-fluid">
 
         <div class="row">
             <div class="col-sm-4">
+                <div class="image_p" *ngIf="user.avatar_url">
                 <img class= "image" src={{user.avatar_url}}>
+            </div>
 
             </div>
             <div class="col-sm-4">
-                <p>{{user.name}}</p>
-                <p>{{user.login}}</p>
+                <div class="userInfo">
+                <h2 class="username" *ngIf="user.name">Github Name: {{user.name}}</h2>
+                <h4 class="login" *ngIf="user.login">Github Login: {{user.login}}</h4>
+                <h5 class="link" *ngIf="user.html_url"><a href="{{user.html_url}}">Github Repo</a></h5>
+                </div>
 
             </div>
             <div class="col-sm-4">
@@ -37,5 +45,5 @@
 
 
     
-    </div>
+    
 </div>
