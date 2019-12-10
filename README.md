@@ -1,27 +1,33 @@
-# Gitsearch
+# Githubsearch
+Github search is a tool that allows users to search other users and their repositories on Github via username.It displays user information after searching including the users repositories
+## Author: Joel Mukono
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+## Technologies Used
+- HTML
+- CSS
+- Typescript
 
-## Development server
+## BDD.
+- use api to get user information
+- use search form to find user
+- use template to display user information
+- filter information by username
+- show one result per query
+-
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Set-up instructions
+- Go to https://github.com/Joelmukono/Githubsearch
+- fork repo..
+- make a new branch
+- add changes and make sure they reflect.
+- commit changes made.
+- push to branch
+- create pull request
+- Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the --prod flag for a production build.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Contact information.
+### Email:  jlmukono@gmail.com
+### Phone:  0705791871
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Copyright (c) 2019, Joel Mukono.
