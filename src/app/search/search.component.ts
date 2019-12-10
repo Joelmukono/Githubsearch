@@ -10,7 +10,7 @@ import {Repos} from '../repos';
 export class SearchComponent implements OnInit {
   user:User;
   repo:Repos;
-  username:string ="Joelmukono";
+  username:string;
   repoDetails = [];
 
   constructor(private service:GitsearchService) { }
