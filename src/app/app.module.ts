@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HighlightDirective } from './highlight.directive';
+import { TouppercasePipe } from './touppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HighlightDirective } from './highlight.directive';
     LandingComponent,
     NavbarComponent,
     NotFoundComponent,
-    HighlightDirective
+    HighlightDirective,
+    TouppercasePipe
   ],
   imports: [
     FormsModule,
