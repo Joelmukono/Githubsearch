@@ -5,7 +5,7 @@ import {LandingComponent}from './landing/landing.component';
 
 const routes: Routes = [
   {path:'search',component:SearchComponent },
-  {path:'Home',component:LandingComponent},
+  {path:'home',component:LandingComponent},
 ];
 
 @NgModule({
