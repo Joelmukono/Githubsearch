@@ -29,8 +29,8 @@ export class GitsearchService {
        avatar_url:string;
        html_url:string;
        public_repos:number;
-       followers_url:string;
-       following_url:string;
+       followers:string;
+       following:string;
      }
      let promise = new Promise((resolve,reject)=>{
        this.http.get<ApiResponse>(environment.apiUrl+username+environment.apiToken).toPromise().then(response=>{
@@ -38,8 +38,8 @@ export class GitsearchService {
          this.user.login = response.login;
          this.user.avatar_url = response.avatar_url;
          this.user.html_url = response.html_url;
-         this.user.followers_url = response.followers_url;
-         this.user.following_url = response.following_url;
+         this.user.followers = response.followers;
+         this.user.following = response.following;
          this.user.public_repos = response.public_repos;
 
          resolve()
