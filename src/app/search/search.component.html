@@ -1,19 +1,10 @@
 
     <div class="container">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img class="image" src="assets/github.png"></a>
-        </div>
-        
-        
-        </div>
-    </nav>
+    
     </div>
 
 
     <div class="container-fluid">
-            
         <div class="search">
             <form action="" (ngSubmit)="findProfiles()">
             <input  type="text" class="form-control"  [(ngModel)]="username" name="username">
@@ -28,7 +19,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="image_p" *ngIf="user.avatar_url">
-                <img class= "image" src={{user.avatar_url}}>
+                <img class= "aimage" src={{user.avatar_url}}>
             </div>
 
             </div>
@@ -42,7 +33,7 @@
 
             </div>
             <div class="col-sm-4">
-                    <h2 *ngIf="repo.name">Repo Name</h2>
+                    
                 
                 <div class="repoDetails" *ngFor="let repo of repoDetails">
                         
